@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+	   <meta charset="utf-8">
+       <meta http-equiv="Cache-Control" content="no-cache">
+	   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+       <meta name="yandex-verification" content="ed4b1ac59362c3a8" />
+        <!-- Подключение css -->
+        <link href="css/desktop.css" rel="stylesheet">
+        <link href="css/mobile.css" rel="stylesheet">
+        <!-- Подключение jquery -->
+        <script src="js/libs/jquery/jquery.min.js"></script>
+        <script src="js/libs/jquery-ui/jquery-ui.min.js"></script>
+        <!-- Подключение angular -->
+        <script src="js/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="js/libs/angularjs/1.6.9/angular-route.js"></script>
+        <script src="js/libs/angularjs/1.6.9/angular-cookies.js"></script>
+        <script src="js/libs/angularjs/1.6.9/angular-sanitize.min.js"></script>
+        <!-- Подключение файла для подмены основной части контента -->
+        <script src="js/routes.js"></script>
+        <script src="js/controllers/common.js"></script>
+        <script src="js/controllers/index.js"></script>
+        <script src="js/controllers/cat_game.js"></script>
+        <script src="js/controllers/dog_game.js"></script>
+        <script src="js/controllers/para_cat_game.js"></script>
+        <script src="js/controllers/para_dog_game.js"></script>
+        <script src="js/controllers/cat_4x4.js"></script>
+        <script src="js/controllers/dog_4x4.js"></script>
+        <script src="js/controllers/cat_6x6.js"></script>
+        <script src="js/controllers/dog_6x6.js"></script>
+        <!-- Подключение настроенной структуры ООП -->
+        <script src="js/classes/para_game.js"></script>
+        <!-- Подключение anime.js -->
+        <script src="js/libs/anime/lib/anime.min.js"></script>
+        <!-- Подключение api -->
+        <script src="js/api.js"></script>
+    </head>
+
+    <body ng-app="main" ng-controller="common" ng-class="{'loaded':isLoaded}">
+
+        <div class="blocked" style="display:none;"></div>
+        <!-- Основная часть -->
+        <div class="wrap">
+            <!-- Основной блок страницы -->
+            <div class="main">
+                <div ng-view class="main-content"></div>
+            </div>
+        </div>
+    </body>
+</html>

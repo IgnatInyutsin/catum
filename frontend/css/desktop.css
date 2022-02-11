@@ -1,0 +1,223 @@
+body {
+    overflow: hidden;
+}
+.left_main_side {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background-color: #f6f6f6;
+    z-index: 0;
+}
+.right_main_side {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    right: 0;
+    background-color: #000000;
+    z-index: 0;
+}
+.main_text {
+    color: #fff!important;
+    text-shadow: 3px 0 3px #000,
+    0 3px 3px #000,
+    -3px 0 3px #000,
+    0 -3px 3px #000;
+    text-align: center;
+    font-size: 40px;
+    z-index: 3;
+}
+.main-content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 3;
+}
+.img_a {
+    position: relative;
+    width: 48%;
+    height: auto;
+    z-index: 3;
+}
+.index_img {
+    height: 100%;
+    width: 100%;
+}
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    margin: auto;
+    max-width: 1180px;
+}
+.dog_content {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    max-width: 1180px;
+    justify-content: space-between;
+    margin: auto;
+}
+.left_panel {
+    position: relative;
+    width: 38%;
+    height: 100%;
+}
+.right_panel {
+    position: relative;
+    width: 48%;
+    height: 100%;
+}
+.dogs_tag {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.right_doggy {
+    display: flex;
+    flex-direction: column;
+}
+.name_of_game {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.black_border_button {
+    text-decoration: none;
+    display: inline-block;
+    width: 90%;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 45px;
+    margin: 10px 20px;
+    font-size: 11px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 600;
+    background: white;
+    box-shadow: 0 8px 15px #454545;
+    transition: .3s;
+}
+.black_border_button:hover {
+    background: #a98f3b;
+    box-shadow: 0 15px 20px #2b2b2b;
+    color: white;
+    transform: translateY(-7px);
+}
+.purple_button:hover {
+    background: #8F497B;
+    box-shadow: 0 15px 20px #2b2b2b;
+    color: white;
+    transform: translateY(-7px);
+}
+.black_background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+}
+.para_button {
+    position: relative;
+    height: 150px;
+    line-height: 150px;
+    font-size: 50px;
+    width: 40%;
+}
+.para_dog_content {
+    width: 100%;
+    max-width: 1180px;
+    height: 100%;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+}
+.para_mod_buttons {
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.mode_dog_text {
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+.mode_cat_text {
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    font-weight: 600;
+    color: white;
+}
+.doggy_img {
+    height: 300px;
+    width: auto;
+}
+.main_content_4x4 {
+    position: absolute;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    align-items: center;
+}
+.memory_game_4x4 {
+    position: absolute;
+    display: flex;
+    width: 90vw;
+    height: 90vw;
+    display: flex;
+    flex-flow: row wrap;
+    margin: auto;
+}
+.front-face,
+.back-face {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    position: absolute;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.back-face {
+    display: none;
+}
+.front-face {
+    transform: rotateY(180deg);
+    z-index: 2;
+}
+.memory-card {
+    position: relative;
+    width: 25%;
+    height: 25%;
+    transform: scale(1);
+    transition: transform 5s;
+    transform-style: preserve-3d;
+}
+.memory-card:active {
+    transform: scale(0.9);
+    transition: transform 0.2s;
+}
+.memory-card.flip .front-face {
+    display: none;
+}
+.memory-card.flip .back-face {
+    display: block;
+}
+
+@media screen and (orientation: landscape) {
+    .main_content_4x4 {
+        justify-content: center;
+    }
+    .memory_game_4x4 {
+        width: 90vh;
+        height: 90vh;
+    }
+}

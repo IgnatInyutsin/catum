@@ -1,0 +1,43 @@
+@media only screen and (max-width: 768px) {
+    .dog_content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .left_panel {
+        display: none;
+    }
+    .right_panel {
+        width: 98%;
+    }
+    .black_border_button {
+        position: relative;
+        width: 90%;
+    }
+    .para_dog_content {
+        flex-direction: row;
+    }
+    .para_mod_buttons {
+        flex-direction: column;
+        margin-bottom: 0;
+        justify-content: center;
+    }
+    .mode_dog_text {
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 600;
+    }
+    .mode_cat_text {
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 600;
+    }
+    .doggy_img {
+        height: 150px;
+        width: 150px;
+    }
+    .text_para_game {
+        display: none;
+    }
+}
