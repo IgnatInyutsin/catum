@@ -103,8 +103,8 @@ class ParaGame {
 
     //функция разворота карточек
     flip(n) {
-        if (this.untapped[0] == 1 && n == this.untapped[1]) {
-            return console.log("LOL")
+        if ((this.untapped[0] == 1 && n == this.untapped[1]) || (this.cardsInGames[n-1].untap)){
+            return console.log("LOL");
         }
         if (this.untapped[0] == 2) {
             document.getElementById("card" + this.untapped[1]).classList.remove("flip");
@@ -112,7 +112,6 @@ class ParaGame {
             this.untapped[0] = 0
         }
         document.getElementById("card" + n).classList.add("flip");
-        this.cardsInGames[n-1].untap = true
         this.untapped[0] += 1
 
         //проверка, сколько карточек тапнуто
@@ -124,6 +123,8 @@ class ParaGame {
             if (this.cardsInGames[this.untapped[2]-1].id == this.cardsInGames[this.untapped[1]-1].id) { //если карточки одинаковые засчитываем их в победные очки
                 this.untapped[0] = 0
                 this.winpoint += 2
+                this.cardsInGames[this.untapped[1] - 1].untap = true
+                this.cardsInGames[n - 1].untap = true
             }
         }
 
