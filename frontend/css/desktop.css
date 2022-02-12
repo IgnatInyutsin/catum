@@ -211,6 +211,23 @@ body {
 .memory-card.flip .back-face {
     display: block;
 }
+.guide_content {
+    width: 98%;
+    max-width: 1180px;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.left_guide_part,
+.right_guide_part {
+    width: 48%;
+    height: 100vh;
+    overflow: auto;
+}
+::-webkit-scrollbar {
+    width: 0;
+}
 
 @media screen and (orientation: landscape) {
     .main_content_4x4 {

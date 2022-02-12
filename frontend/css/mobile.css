@@ -40,4 +40,22 @@
     .text_para_game {
         display: none;
     }
+    .guide_content {
+        flex-direction: column;
+        height: auto;
+        overflow-y: auto;
+        overflow-x: hidden;
+        width: 98vw;
+    }
+    .left_guide_part,
+    .right_guide_part {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        overflow-x: hidden;
+    }
+    .text {
+        position: relative;
+        width: 90%;
+    }
 }

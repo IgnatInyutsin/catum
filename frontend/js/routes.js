@@ -38,4 +38,8 @@ main.config(function ($routeProvider) {
         controller: "dog_6x6",
         templateUrl: "views/controllers/dog_6x6.html"
     });
+    $routeProvider.when("/para_game_guide/:redirect_url", {
+        controller: "para_game_guide",
+        templateUrl: "views/controllers/para_game_guide.html"
+    });
 });

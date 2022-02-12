@@ -13,7 +13,7 @@ main.controller('dog_game', function ($scope, $http, $location, $cookies) {
 
     $scope.dogParaClick = function () {
         paraButton.restart();
-        setTimeout(api.redirect, 1000, "!/para_dog_game/");
+        setTimeout(api.redirect, 1000, "!/para_game_guide/para_dog_game");
     }
 
 });
