@@ -42,4 +42,8 @@ main.config(function ($routeProvider) {
         controller: "para_game_guide",
         templateUrl: "views/controllers/para_game_guide.html"
     });
+    $routeProvider.when("/homepage/", {
+        controller: "homepage",
+        templateUrl: "views/controllers/homepage.html"
+    });
 });

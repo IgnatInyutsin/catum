@@ -228,7 +228,35 @@ body {
 ::-webkit-scrollbar {
     width: 0;
 }
-
+.homepage_content {
+    width: 100%;
+    max-width: 1180px;
+    margin: auto;
+    height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+.homepage_first_block, .homepage_second_block {
+    display: flex;
+}
+.title {
+    text-align: center;
+    font-size: 35px;
+}
+.homepage_text {
+    font-size: 25px;
+}
+.ad {
+    width: 70%;
+}
+.homepage_img {
+    width: 25%;
+}
+.homepage_img img {
+    width: 100%;
+    height: auto;
+}
 @media screen and (orientation: landscape) {
     .main_content_4x4 {
         justify-content: center;
