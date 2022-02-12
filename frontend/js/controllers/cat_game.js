@@ -13,6 +13,6 @@ main.controller('cat_game', function ($scope, $http, $location, $cookies) {
 
     $scope.catParaClick = function () {
         paraButton.restart();
-        setTimeout(api.redirect, 1000, "!/para_cat_game/");
+        setTimeout(api.redirect, 1000, "!/para_game_guide/para_cat_game");
     }
 });

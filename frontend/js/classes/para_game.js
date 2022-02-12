@@ -130,8 +130,11 @@ class ParaGame {
 
         //проверка победных очков
         if (this.winpoint == this.type*this.type) {
+            //убираем игровое поле
+            document.getElementById("game_panel").style.display = "none"
+            //переносим на страницу ранее
             let api = new Api();
-            api.redirect('!/' + this.animal + "_game/");
+            setTimeout(api.redirect, 5000, '!/' + this.animal + "_game/");
         }
     }
 }
