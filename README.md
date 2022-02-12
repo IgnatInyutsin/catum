@@ -1,3 +1,4 @@
-# This website for duels club paper wars.
-### docker/ - docker-compose and more for fast host up.
-### frontend/ - website frontend part, html+css+js. Framework: bootstrap 4, JQuery and Angular.js
+# Проект для Регионального Хакатона 2022, кейс Junior - игра для развития памяти
+### docker/ - docker-compose для поднятия сервера на любом устройстве с доступом к этим утилитам (MacOS, Дистрибутивы Linux).
+### frontend/ - фронтэнд-часть сайта. Используется HTML, CSS и JS с мощным фреймворком AngularJS
+### flask/ - бэкэнд часть сайта. Пусто
