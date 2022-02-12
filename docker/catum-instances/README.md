@@ -1,7 +1,7 @@
-# How up a host?
-### 1 - install docker and docker-compose
-### 2 - copy .env.sample to .env
-### 3 - edit .env for yourself
-### 4 - run build or docker-compose build for building project
-### 5 - run start or docker-compose up -d for up to host
-### 6 - run stop or docker-compose down for down to host.
+# Как поднять сервер?
+### 1 - установите docker и docker-compose
+### 2 - скопируйте .env.sample в .env
+### 3 - редактируйте .env под себя
+### 4 - запустите файл build или используйте команду docker-compose build внутри этой директории для сборки проекта
+### 5 - запустите файл start или используйте команду docker-compose up -d внутри этой директории чтобы включить хост
+### 6 - запустите файл stop или используйте команду docker-compose down внутри этой директории чтобы выключить хост

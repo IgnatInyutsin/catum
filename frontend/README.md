@@ -1,5 +1,5 @@
-# This is frontend part of website
-### css/ - all css-style of website
-### js/ - libs and angular controllers for website page
-### views/ - html templates for page. footer and header
-### img/ - image for website
+# Фронтэнд
+### css/ - стилизация веб страниц
+### js/ - библиотеки, ООП структуры и контроллеры AngularJS
+### views/ - html-шаблоны для различных страниц
+### img/ - изображения для веб-сайтаа
