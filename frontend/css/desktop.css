@@ -1,5 +1,6 @@
 body {
     overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
 }
 .left_main_side {
     position: absolute;
