@@ -219,6 +219,7 @@ body {
     margin: auto;
     display: flex;
     justify-content: space-between;
+    overflow-y: auto;
 }
 .left_guide_part,
 .right_guide_part {

@@ -58,10 +58,6 @@
         position: relative;
         width: 90%;
     }
-    .guide_content {
-        overflow-y: auto;
-    }
-}
 @media only screen and (max-width: 900px) {
     .homepage_first_block, .homepage_second_block {
         flex-direction: column;
