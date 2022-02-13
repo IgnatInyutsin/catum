@@ -171,11 +171,10 @@ body {
 .memory_game_4x4 {
     position: absolute;
     display: flex;
-    width: 90vw;
-    height: 90vw;
+    width: 100vw;
+    height: 100vw;
     display: flex;
     flex-flow: row wrap;
-    margin: auto;
 }
 .front-face,
 .back-face {
@@ -264,7 +263,8 @@ body {
         justify-content: center;
     }
     .memory_game_4x4 {
-        width: 90vh;
-        height: 90vh;
+        width: 100vh;
+        height: 100vh;
+        margin: 0 0 0 0;
     }
 }
