@@ -132,6 +132,7 @@ class ParaGame {
         if (this.winpoint == this.type*this.type) {
             //убираем игровое поле
             document.getElementById("game_panel").style.display = "none"
+            document.getElementById("win_screen").style.display = "flex"
             //переносим на страницу ранее
             let api = new Api();
             setTimeout(api.redirect, 5000, '!/' + this.animal + "_game/");

@@ -39,12 +39,19 @@
         </div>
     </div>
 
-    <div class="black_border_button next_level" ng-click="nextLevelClick()" style="display: none;" id="next_level_but">Следующий уровень</div>
+    <div class="black_border_button next_level" ng-click="nextLevelClick()" style="display: none; margin-bottom: 40px" id="next_level_but">Следующий уровень</div>
     <div style="width: 100%; display: none" id="looser"><img src="img/lose1.jpg" alt="" style="width: 100%; height: auto;"></div>
 </div>
 
 <style>
     body {
         background: black;
+        overflow: auto;
+    }
+
+    @media only screen and (max-width: 900px) {
+        body {
+            overflow: hidden;
+        }
     }
 </style>

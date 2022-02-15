@@ -66,7 +66,16 @@ class OrderGame {
         let a;
         for (let i=1; i<5; i++) {
             a = Math.round(Math.random() * (this.allCardsDatabase.length - 1 - 0) + 0);
-            document.getElementById('img' + i).src = this.allCardsDatabase[a].fileName
+            if (i >= 2) {
+                if (this.cardsNow[i - 2].id != this.allCardsDatabase[a].id) {
+                    document.getElementById('img' + i).src = this.allCardsDatabase[a].fileName
+                } else {
+                    i--;
+                    continue
+                }
+            } else {
+                document.getElementById('img' + i).src = this.allCardsDatabase[a].fileName
+            }
             this.cardsNow.push(this.allCardsDatabase[a])
         }
 
@@ -117,6 +126,7 @@ class OrderGame {
                 this.activeCards[2].id  ==  this.cardsNow[1].id &&
                 this.activeCards[3].id  ==  this.cardsNow[0].id) {
                 document.getElementById("next_level_but").style.display = "block"
+                document.getElementById('add_response').style.display = "none"
             }
             else {
                 let api = new Api();

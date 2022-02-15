@@ -63,30 +63,43 @@
         flex-direction: column;
         justify-content: center;
     }
+
     .ad {
         width: 98%;
     }
+
     .homepage_text {
         text-align: center;
         width: 98%;
     }
+
     .homepage_img {
         width: 70%;
         margin: auto;
     }
+
     .add_response {
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
+
     .actual_images {
         width: 100%;
+        height: 20vh;
+        padding: 0 0 0 0;
+        overflow-y: auto;
     }
+
     .choose_images {
         width: 100%;
+        height: 40vh;
+        overflow-y: auto;
     }
+
     .order_game_img {
         width: 100px;
         height: 100px;
+        margin: 2px 2px 2px 2px;
     }
 }
