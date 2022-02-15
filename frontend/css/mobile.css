@@ -74,4 +74,19 @@
         width: 70%;
         margin: auto;
     }
+    .add_response {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .actual_images {
+        width: 100%;
+    }
+    .choose_images {
+        width: 100%;
+    }
+    .order_game_img {
+        width: 100px;
+        height: 100px;
+    }
 }

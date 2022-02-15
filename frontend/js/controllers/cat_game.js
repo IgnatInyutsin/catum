@@ -10,9 +10,18 @@ main.controller('cat_game', function ($scope, $http, $location, $cookies) {
         scale: 1.2,
         autoplay: false
     });
+    let orderButton = anime({
+        targets: "order_cat",
+        scale: 0.8,
+        autoplay: false
+    });
 
     $scope.catParaClick = function () {
         paraButton.restart();
         setTimeout(api.redirect, 1000, "!/para_game_guide/para_cat_game");
+    }
+    $scope.catOrderClick = function () {
+        orderButton.restart();
+        setTimeout(api.redirect, 1000, "!/order_game_guide/cat_order_game");
     }
 });

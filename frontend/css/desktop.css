@@ -258,6 +258,56 @@ body {
     width: 100%;
     height: auto;
 }
+.order_game_content {
+    width: 100%;
+    max-width: 1180px;
+    height: 100vh;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.view_images {
+    position: relative;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.add_response {
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: start;
+}
+.actual_images {
+    background: #007fff;
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-flow: row wrap;
+}
+.choose_images {
+    background: #8453E3;
+    width: 60%;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    display: flex;
+    flex-flow: row wrap;
+}
+.choosen {
+    border: 4px solid white;
+}
+.order_game_img {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin: 10px 10px 10px 10px;
+}
+
 @media screen and (orientation: landscape) {
     .main_content_4x4 {
         justify-content: center;

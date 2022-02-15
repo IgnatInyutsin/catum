@@ -42,8 +42,24 @@ main.config(function ($routeProvider) {
         controller: "para_game_guide",
         templateUrl: "views/controllers/para_game_guide.html"
     });
+    $routeProvider.when("/order_game_guide/:redirect_url", {
+        controller: "order_game_guide",
+        templateUrl: "views/controllers/order_game_guide.html"
+    });
     $routeProvider.when("/homepage/", {
         controller: "homepage",
         templateUrl: "views/controllers/homepage.html"
+    });
+    $routeProvider.when("/homepage/", {
+        controller: "homepage",
+        templateUrl: "views/controllers/homepage.html"
+    });
+    $routeProvider.when("/dog_order_game/:currentLevel?", {
+        controller: "dog_order_game",
+        templateUrl: "views/controllers/dog_order_game.html"
+    });
+    $routeProvider.when("/cat_order_game/:currentLevel?", {
+        controller: "cat_order_game",
+        templateUrl: "views/controllers/cat_order_game.html"
     });
 });
