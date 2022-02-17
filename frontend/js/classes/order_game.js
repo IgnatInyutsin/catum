@@ -118,13 +118,17 @@ class OrderGame {
         document.getElementById('actual_images').append(elem);
         //если выбрано 4 проверяем равность
         if (this.activeCards.length == 4) {
-            //преобразуем массивы в строки чтобы сравнить
             console.log(this.activeCards)
             console.log(this.cardsNow)
             if (this.activeCards[0].id  ==  this.cardsNow[3].id &&
                 this.activeCards[1].id  ==  this.cardsNow[2].id &&
                 this.activeCards[2].id  ==  this.cardsNow[1].id &&
                 this.activeCards[3].id  ==  this.cardsNow[0].id) {
+                //подключаем api
+                let api = new Api();
+                //записываем победные баллы
+                document.cookie = this.animal + "_point=" + (Number(api.getCookie(this.animal + "_point")) + Math.round(10*Math.pow(1.25, this.level)))
+                //добавляем кнопку перехода на следующий уровень
                 document.getElementById("next_level_but").style.display = "block"
                 document.getElementById('add_response').style.display = "none"
             }

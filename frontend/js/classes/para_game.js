@@ -8,6 +8,7 @@ class ParaGame {
         this.animal = obj.animal
         this.untapped = [0, 0]
         this.winpoint = 0
+        this.clicks = 0
         //взависимости от типа добавляем данные о карточках догги или котов
         if (this.animal == "dog") {
             this.allCardsDatabase = [
@@ -120,6 +121,7 @@ class ParaGame {
         }
         else if (this.untapped[0] == 2) {
             this.untapped[2] = n
+            this.clicks += 1
             if (this.cardsInGames[this.untapped[2]-1].id == this.cardsInGames[this.untapped[1]-1].id) { //если карточки одинаковые засчитываем их в победные очки
                 this.untapped[0] = 0
                 this.winpoint += 2
@@ -133,8 +135,18 @@ class ParaGame {
             //убираем игровое поле
             document.getElementById("game_panel").style.display = "none"
             document.getElementById("win_screen").style.display = "flex"
-            //переносим на страницу ранее
+            //подключаем api
             let api = new Api();
+            //добавляем очки в общий зачет
+            let startSum;
+            if (this.type == 4) {
+                startSum = 450
+            } else {
+                startSum = 1000
+            }
+            let points = Number(api.getCookie(this.animal + "_point")) + (startSum-this.clicks*15)
+            document.cookie = this.animal + "_point=" + points
+            //переносим на страницу ранее
             setTimeout(api.redirect, 5000, '!/' + this.animal + "_game/");
         }
     }

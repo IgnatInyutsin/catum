@@ -99,6 +99,16 @@ class SoundGame {
             if (this.choosenSong.length == this.level) {
                 if (JSON.stringify(this.choosenSong) == JSON.stringify(this.soundsNow)) {
                     document.getElementById("next_level_but").style.display = "block"
+                    //подключаем api
+                    let api = new Api();
+                    //записываем победные баллы
+                    let k;
+                    if (this.animal == "cat") {
+                        k = 50
+                    } else {
+                        k = 25
+                    }
+                    document.cookie = this.animal + "_point=" + (Number(api.getCookie(this.animal + "_point") + k*this.level))
                 }
                 else {
                     let api = new Api();

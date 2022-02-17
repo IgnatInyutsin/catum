@@ -38,17 +38,26 @@ body {
 }
 .img_a {
     position: relative;
-    width: 48%;
+    width: 30%;
     height: auto;
     z-index: 3;
 }
+.points_content {
+    width: 10%;
+    position: relative;
+    height: auto;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .index_img {
-    height: 100%;
+    height: auto;
     width: 100%;
 }
 .menu {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     height: 100%;
     margin: auto;
@@ -66,6 +75,8 @@ body {
     position: relative;
     width: 38%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 .right_panel {
     position: relative;

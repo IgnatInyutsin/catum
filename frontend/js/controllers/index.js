@@ -2,6 +2,10 @@ main.controller('index', function ($scope, $http, $location, $cookies) {
     //контроллер страницы index
     $scope.$parent.pageName = 'index';
 
+    //вывод данных о очках на сайт
+    $scope.dog_point = $cookies.get('dog_point');
+    $scope.cat_point = $cookies.get('cat_point');
+
     //подключение Api
     let api = new Api();
 

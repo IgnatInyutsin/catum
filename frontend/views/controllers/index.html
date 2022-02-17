@@ -1,6 +1,14 @@
 <div class="left_main_side" ng-click="doggyClick()"></div></a>
 <div class="right_main_side" ng-click="cattyClick()"></div></a>
 <div class="menu">
+    <div class="points_content">
+        <img src="img/doge_coin.png" alt="" class="index_img" style="width: 30%;" ng-click="doggyClick()">
+        <div class="main_text" style="font-size: 2vw;" ng-click="doggyClick()">{{dog_point}}</div>
+    </div>
     <a class="img_a dog_img"><img src="img/sobaka.png" alt="" class="index_img" ng-click="doggyClick()"></a>
     <a class="img_a cat_img"><img src="img/kotik1.png" alt="" class="index_img" ng-click="cattyClick()"></a>
+    <div class="points_content" style="margin-right: 1vw;">
+        <div class="main_text" style="font-size: 2vw;" ng-click="cattyClick()">{{cat_point}}</div>
+        <img src="img/cat_coin.png" alt="" class="index_img" style="width: 30%;" ng-click="cattyClick()">
+    </div>
 </div>
