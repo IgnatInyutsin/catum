@@ -46,6 +46,10 @@ main.config(function ($routeProvider) {
         controller: "order_game_guide",
         templateUrl: "views/controllers/order_game_guide.html"
     });
+    $routeProvider.when("/sound_game_guide/:redirect_url", {
+        controller: "sound_game_guide",
+        templateUrl: "views/controllers/sound_game_guide.html"
+    });
     $routeProvider.when("/homepage/", {
         controller: "homepage",
         templateUrl: "views/controllers/homepage.html"
@@ -61,5 +65,13 @@ main.config(function ($routeProvider) {
     $routeProvider.when("/cat_order_game/:currentLevel?", {
         controller: "cat_order_game",
         templateUrl: "views/controllers/cat_order_game.html"
+    });
+    $routeProvider.when("/dog_sound_game/:currentLevel?", {
+        controller: "dog_sound_game",
+        templateUrl: "views/controllers/dog_sound_game.html"
+    });
+    $routeProvider.when("/cat_sound_game/:currentLevel?", {
+        controller: "cat_sound_game",
+        templateUrl: "views/controllers/cat_sound_game.html"
     });
 });
