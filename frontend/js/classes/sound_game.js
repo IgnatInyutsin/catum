@@ -101,6 +101,7 @@ class SoundGame {
                     document.getElementById("next_level_but").style.display = "block"
                 }
                 else {
+                    let api = new Api();
                     document.getElementById("looser").style.display = "flex"
                     document.getElementById("add_response").style.display = "none"
                     //показав экран проигрыша редиректим обратно
