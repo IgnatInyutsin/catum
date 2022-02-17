@@ -5,6 +5,18 @@ main.controller('cat_sound_game', function ($scope, $http, $location, $cookies, 
     //подключаем api
     let api = new Api()
 
+    //создаем танцующего котика
+    var reverseCat = false
+    setInterval(function () {
+        if (!reverseCat) {
+            document.getElementById('dance').style.transform = "scale(-1, 1)"
+            reverseCat = true
+        } else {
+            document.getElementById('dance').style.transform = "scale(1, 1)"
+            reverseCat = false
+        }
+    }, 500);
+
     //редирект на нормальный юрл если этот не верный
     if ($routeParams.currentLevel == undefined) {
         api.redirect("!/cat_sound_game/1");
@@ -34,6 +46,5 @@ main.controller('cat_sound_game', function ($scope, $http, $location, $cookies, 
         });
         $scope.game = game
         document.getElementById("start_button").style.display = "none"
-        document.getElementById("add_response").style.display = "flex"
     }
 });

@@ -5,6 +5,18 @@ main.controller('dog_sound_game', function ($scope, $http, $location, $cookies, 
     //подключаем api
     let api = new Api()
 
+    //создаем танцующего догги
+    var reverseDog = false
+    setInterval(function () {
+        if (!reverseDog) {
+            document.getElementById('dance').style.transform = "scale(-1, 1)"
+            reverseDog = true
+        } else {
+            document.getElementById('dance').style.transform = "scale(1, 1)"
+            reverseDog = false
+        }
+    }, 500);
+
     //редирект на нормальный юрл если этот не верный
     if ($routeParams.currentLevel == undefined) {
         api.redirect("!/dog_sound_game/1");
@@ -34,6 +46,5 @@ main.controller('dog_sound_game', function ($scope, $http, $location, $cookies, 
         });
         $scope.game = game
         document.getElementById("start_button").style.display = "none"
-        document.getElementById("add_response").style.display = "flex"
     }
 });

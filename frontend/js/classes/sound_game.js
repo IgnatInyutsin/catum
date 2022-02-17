@@ -51,6 +51,7 @@ class SoundGame {
             ]
         }
 
+        document.getElementById("dance").style.display = "block"
         //создаем очередь для единичного проигрывания методом рандома
         let sounds = []
         for (let i = 0; i < this.level; i++) {
@@ -61,29 +62,24 @@ class SoundGame {
         console.log(sounds)
 
         //проигрываем все звуки
-        let sound = new Howl({
-            src: sounds[0],
-            autoplay: true,
-            volume: 0.5
-        });
-        sound.play();
-
-        var z = 1
+        var z = 0
+        sounds.push(["none"])
         let toggleMusic = function () {
+            if (z >= sounds.length) {
+                clearInterval(viewer);
+                document.getElementById('dance').style.display = "none"
+                document.getElementById('add_response').style.display = "flex"
+            }
             let sound = new Howl({
                 src: sounds[z],
                 autoplay: true,
                 volume: 0.5
             });
             sound.play();
-            if (z == sounds.length - 1) {
-                clearInterval(viewer);
-            }
             z++;
         }
-        if (sounds.length != 1) {
-            var viewer = setInterval(toggleMusic, 5500);
-        }
+
+        var viewer = setInterval(toggleMusic, 5500);
     }
 
     addSound(id) {
