@@ -106,9 +106,10 @@ class SoundGame {
                     if (this.animal == "cat") {
                         k = 50
                     } else {
-                        k = 25
+                        k = 10
                     }
-                    document.cookie = this.animal + "_point=" + (Number(api.getCookie(this.animal + "_point") + k*this.level))
+                    let points = Number(api.getCookie(this.animal + "_point")) + k*this.level
+                    document.cookie = this.animal + "_point=" + points
                 }
                 else {
                     let api = new Api();
