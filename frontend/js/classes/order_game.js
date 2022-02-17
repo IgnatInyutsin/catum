@@ -136,7 +136,7 @@ class OrderGame {
                 let api = new Api();
                 document.getElementById("looser").style.display = "block"
                 document.getElementById("add_response").style.display = "none"
-                setTimeout(api.redirect, 5000, "!/" + this.animal + "_game")
+                setTimeout(api.redirect, 5000, "!/index/")
             }
         }
     }

@@ -147,7 +147,7 @@ class ParaGame {
             let points = Number(api.getCookie(this.animal + "_point")) + (startSum-this.clicks*15)
             document.cookie = this.animal + "_point=" + points
             //переносим на страницу ранее
-            setTimeout(api.redirect, 5000, '!/' + this.animal + "_game/");
+            setTimeout(api.redirect, 5000, '!/index/');
         }
     }
 }

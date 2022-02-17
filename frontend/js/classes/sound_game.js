@@ -115,7 +115,7 @@ class SoundGame {
                     document.getElementById("looser").style.display = "flex"
                     document.getElementById("add_response").style.display = "none"
                     //показав экран проигрыша редиректим обратно
-                    setTimeout(api.redirect, 5000, "!/" + this.animal + "_game/")
+                    setTimeout(api.redirect, 5000, "!/index/")
                 }
             }
         }

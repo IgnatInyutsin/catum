@@ -12,7 +12,7 @@ main.controller('cat_sound_game', function ($scope, $http, $location, $cookies, 
     } else if ($routeParams.currentLevel == "18") { //экран победы
         document.getElementById("winner").style.display = "flex"
         document.getElementById("start_button").style.display = "none"
-        setTimeout(api.redirect, 5000, "!/cat_game/")
+        setTimeout(api.redirect, 5000, "!/index/")
     }
 
     //объект анимации кнопки

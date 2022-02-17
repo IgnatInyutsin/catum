@@ -12,7 +12,7 @@ main.controller('dog_sound_game', function ($scope, $http, $location, $cookies, 
     } else if ($routeParams.currentLevel == "18") {
         document.getElementById("winner").style.display = "flex"
         document.getElementById("start_button").style.display = "none"
-        setTimeout(api.redirect, 5000, "!/dog_game/")
+        setTimeout(api.redirect, 5000, "!/index/")
     }
 
     //объект анимации кнопки
